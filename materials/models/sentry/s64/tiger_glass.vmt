@@ -2,13 +2,13 @@
 {
 	"$additive" 1
 
-	"$basetexture" "models\sentry\v22\Tiger_glass"
+	"$basetexture" "models\sentry\s64\tiger_glass"
 	"$envmap" "env_cubemap"
 	"$envmapcontrast" "1"
 	"$envmaptint" "[ 0.75 0.75 0.75 ]"
 	"$model" 1
 	"$halflambert" 1
-	"$bumpmap" "models\sentry\v22\Tiger_glass_n"
+	"$bumpmap" "models\sentry\s64\tiger_glass_n"
 	"$phong" "1"
 	"$phongexponent" "75"
 	"$phongboost" "1"	

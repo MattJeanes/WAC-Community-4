@@ -1,8 +1,8 @@
 if not wac then return end
-ENT.Base = "wac_hc_base"
+ENT.Base = "wac_hc_base_u"
 ENT.Type = "anim"
 ENT.Author = "SentryGunMan & Dr. Matt"
-ENT.Category = wac.aircraft.spawnCategory
+ENT.Category = wac.aircraft.spawnCategoryU
 ENT.Spawnable = true
 ENT.AdminSpawnable = true
 
@@ -52,7 +52,7 @@ function ENT:AddSeatTable()
 						if IsValid(self.Grabber) and not self.GrabberC then
 							local trace=util.QuickTrace(self.Grabber:GetPos(),self.Grabber:GetUp()*-60,{self.Grabber, self})
 							if IsValid(trace.Entity) and not (trace.Entity:GetClass()=="worldspawn") and not (trace.Entity:GetClass()=="prop_static") then
-								self.GrabberC=constraint.Weld(self.Grabber, trace.Entity, 0, 0, 50000, true)
+								self.GrabberC=constraint.Weld(self.Grabber, trace.Entity, 0, 0, 0, true)
 								self.GrabberN=constraint.NoCollide(self.Grabber, trace.Entity, 0, 0)
 							end
 						elseif IsValid(self.Grabber) and self.GrabberC and self.GrabberN then
