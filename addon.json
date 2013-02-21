@@ -1,0 +1,11 @@
+{
+	"title"		:	"WAC Community 4",
+	"type"		:	"vehicle",
+	"tags"		:	[ "fun", "realism" ],
+	"ignore"	:
+	[
+		"addon.txt",
+		"*.md",
+		"*.git*"
+	]
+}

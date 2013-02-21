@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/sentry/s64/tail_blurred"
+	"$nocull" 1
+	"$translucent" 1
+
+}

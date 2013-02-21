@@ -1,0 +1,12 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "models\sentry\s64\tranny"
+	"$bumpmap" "models\sentry\v22\Tiger_glass_n"
+	"$blendtintbybasealpha" "1"
+	"$phong" "1"
+	"$phongexponent" "1"
+	"$phongboost" "20.5"	
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .25 .25 .28 ]"
+
+}

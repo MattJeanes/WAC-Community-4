@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/sentry/s64/lowrez"
+	"$bumpmap" "models/sentry/s64/lowrez_n"
+}
