@@ -54,7 +54,13 @@ function ENT:AddStuff()
 	self.WinchL=10
 	self.Winch=constraint.Rope(self, e1, 0, 0, Vector(-20,0,102), Vector(0,0,0), self.WinchL, 0, 0, 3, "cable/cable2", false)
 	self.Grabber=e1
+	
+	self.WinchMovingS = CreateSound(self, "vehicles/Crane/crane_extend_loop1.wav")
+	self.WinchMovingS:ChangeVolume(0.5,0)
+	self.WinchMovingS:Stop()
 end
+
+
 
 function ENT:ChangeRopeLength(len)
 	if len and IsValid(self.Grabber) and IsValid(self.Winch) then

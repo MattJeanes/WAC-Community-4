@@ -50,16 +50,21 @@ function ENT:AddSeatTable()
 					func=function(self,t,p)
 						if not (t.NextShoot<=CurTime()) then return end
 						if IsValid(self.Grabber) and not self.GrabberC then
-							local trace=util.QuickTrace(self.Grabber:GetPos(),self.Grabber:GetUp()*-60,{self.Grabber, self})
+							local trace=util.QuickTrace(self.Grabber:GetPos(),self.Grabber:GetUp()*-65,{self.Grabber, self})
+							if not (IsValid(trace.Entity) and not (trace.Entity:GetClass()=="worldspawn") and not (trace.Entity:GetClass()=="prop_static")) then
+								trace=util.QuickTrace(self.Grabber:GetPos()+Vector(0,-45,-60),self.Grabber:GetRight()*80,{self.Grabber, self})
+							end
 							if IsValid(trace.Entity) and not (trace.Entity:GetClass()=="worldspawn") and not (trace.Entity:GetClass()=="prop_static") then
 								self.GrabberC=constraint.Weld(self.Grabber, trace.Entity, 0, 0, 50000, true)
 								self.GrabberN=constraint.NoCollide(self.Grabber, trace.Entity, 0, 0)
+								self:EmitSound("vehicles/Crane/crane_magnet_switchon.wav", 100, 50)
 							end
 						elseif IsValid(self.Grabber) and self.GrabberC and self.GrabberN then
 							self.GrabberC:Remove()
 							self.GrabberC=nil
 							self.GrabberN:Remove()
 							self.GrabberN=nil
+							self:EmitSound("vehicles/Crane/crane_magnet_switchon.wav", 100, 50)
 						end
 						t.LastShot=CurTime()
 						t.NextShoot=t.LastShot+t.ShootDelay
@@ -67,9 +72,19 @@ function ENT:AddSeatTable()
 					Phys=function(self,t,p)
 						if not self.Winch then return end
 						if( p.HelkeysDown and p.HelkeysDown[4] ) then
+							self.WinchMoving=true
+							self.WinchMovingS:Play()
 							self:ChangeRopeLength(math.Clamp(self.WinchL+.25,10,300))
 						elseif( p.HelkeysDown and p.HelkeysDown[3] ) then
+							self.WinchMoving=true
+							self.WinchMovingS:Play()
 							self:ChangeRopeLength(math.Clamp(self.WinchL-.25,10,300))
+						elseif( p.HelkeysDown and not p.HelkeysDown[3] and not p.HelkeysDown[4] ) then
+							if self.WinchMoving then
+								self.WinchMoving=false
+								self.WinchMovingS:Stop()
+								self:EmitSound("vehicles/Crane/crane_extend_stop.wav", 100, 50)
+							end
 						end
 					end
 				}),
