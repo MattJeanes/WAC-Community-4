@@ -74,11 +74,11 @@ function ENT:AddSeatTable()
 						if( p.HelkeysDown and p.HelkeysDown[4] ) then
 							self.WinchMoving=true
 							self.WinchMovingS:Play()
-							self:ChangeRopeLength(math.Clamp(self.WinchL+.25,10,300))
+							self:ChangeRopeLength(math.Clamp(self.WinchL+1,10,300))
 						elseif( p.HelkeysDown and p.HelkeysDown[3] ) then
 							self.WinchMoving=true
 							self.WinchMovingS:Play()
-							self:ChangeRopeLength(math.Clamp(self.WinchL-.25,10,300))
+							self:ChangeRopeLength(math.Clamp(self.WinchL-1,10,300))
 						elseif( p.HelkeysDown and not p.HelkeysDown[3] and not p.HelkeysDown[4] ) then
 							if self.WinchMoving then
 								self.WinchMoving=false
