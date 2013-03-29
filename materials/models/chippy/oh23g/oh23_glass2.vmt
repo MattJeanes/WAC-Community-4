@@ -1,0 +1,26 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/chippy/oh23g/oh23_glass2"
+	"$bumpmap"    "models/chippy/oh23g/oh23_glass2_n"
+	"$translucent" 1
+	"$halflambert" 1
+	"$phong" "1" 
+	"$phongboost" "43" 
+	"$phongfresnelranges" "[4 1 4]"
+	"$surfaceprop" "Glass"
+
+   	 "$rimlight" "1"
+	"$rimlightexponent" "50"
+	"$rimlightboost" "0.01"
+	"$rimmask" "0"
+
+	"$envmap" "env_cubemap"
+
+	
+	"$normalmapalphaenvmapmask" 1
+	"$envmapFresnel" "1"
+
+	
+	$envmaptint "[ 0.001 0.001 0.0035 ]"
+	$phongtint "[ 0.1 0.1 0.25 ]"
+ }

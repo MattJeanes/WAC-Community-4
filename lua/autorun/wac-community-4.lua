@@ -50,3 +50,19 @@ sound.Add(
 	soundlevel = 60,
 	sound = "WAC/S-64/internal.wav"
 })
+
+sound.Add(
+{
+	name = "OH23G.External",
+	channel = CHAN_STATIC,
+	soundlevel = 140,
+	sound = "WAC/oh23g/external.wav"
+})
+
+sound.Add(
+{
+	name = "OH23G.Internal",
+	channel = CHAN_STATIC,
+	soundlevel = 60,
+	sound = "WAC/oh23g/internal.wav"
+})

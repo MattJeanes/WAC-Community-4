@@ -13,3 +13,4 @@ Aircraft
 In this pack you will find:
 
 • S-64 Skycrane
+• OH-23G Raven
