@@ -66,3 +66,19 @@ sound.Add(
 	soundlevel = 60,
 	sound = "WAC/oh23g/internal.wav"
 })
+
+sound.Add(
+{
+	name = "C130.External",
+	channel = CHAN_STATIC,
+	soundlevel = 180,
+	sound = "^WAC/c130/external.wav"
+})
+
+sound.Add(
+{
+	name = "C130.Internal",
+	channel = CHAN_STATIC,
+	soundlevel = 100,
+	sound = "WAC/c130/internal.wav"
+})
