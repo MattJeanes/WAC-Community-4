@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/sentry/Stuka/JU_87_Canopy"
+	"$bumpmap" "models/sentry/Stuka/JU_87_Canopy_nm"
+}

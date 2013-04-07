@@ -15,3 +15,4 @@ In this pack you will find:
 • S-64 Skycrane
 • OH-23G Raven
 • C-130J Super Hercules
+• Junkers Ju-87 Stuka

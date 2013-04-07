@@ -82,3 +82,19 @@ sound.Add(
 	soundlevel = 100,
 	sound = "WAC/c130/internal.wav"
 })
+
+sound.Add(
+{
+	name = "Stuka.External",
+	channel = CHAN_STATIC,
+	soundlevel = 180,
+	sound = "WAC/Stuka/external.wav"
+})
+
+sound.Add(
+{
+	name = "Stuak.Internal",
+	channel = CHAN_STATIC,
+	soundlevel = 160,
+	sound = "WAC/Stuka/internal.wav"
+})

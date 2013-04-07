@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/sentry/Stuka/JU_87_Fuselage2_t"
+	"$bumpmap" "models/sentry/Stuka/JU_87_Fuselage2_t_nm"
+	"$normalmapalphaenvmapmask" "1"
+	"$phong" 		"1"
+	"$phongexponent" 	"6"
+	"$phongboost"   "0.2"
+	"$phongfresnelranges"   "[1 8 4]"
+
+	"$envmap" "env_cubemap"
+	"$envmapcontrast" "1"
+	"$envmaptint" "[ .06 .06 .06 ]"
+}
