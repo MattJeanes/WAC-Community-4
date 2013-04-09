@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "chippy/p40/tread"
+	"$bumpmap" "chippy/p40/tread_n"
+}

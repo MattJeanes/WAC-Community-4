@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "chippy/p40/tile_square_white_t"
+	"$translucent" 1
+}

@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "sentry/p39/gunsight"
+	"$translucent" 1
+}

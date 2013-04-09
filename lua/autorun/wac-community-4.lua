@@ -98,3 +98,35 @@ sound.Add(
 	soundlevel = 160,
 	sound = "WAC/Stuka/internal.wav"
 })
+
+sound.Add(
+{
+	name = "P39.External",
+	channel = CHAN_STATIC,
+	soundlevel = 180,
+	sound = "WAC/P39/external.wav"
+})
+
+sound.Add(
+{
+	name = "P39.Internal",
+	channel = CHAN_STATIC,
+	soundlevel = 100,
+	sound = "WAC/P39/internal.wav"
+})
+
+sound.Add(
+{
+	name = "P40.External",
+	channel = CHAN_STATIC,
+	soundlevel = 180,
+	sound = "WAC/P40/external.wav"
+})
+
+sound.Add(
+{
+	name = "P40.Internal",
+	channel = CHAN_STATIC,
+	soundlevel = 160,
+	sound = "WAC/P40/internal.wav"
+})

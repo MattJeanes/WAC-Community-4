@@ -16,3 +16,5 @@ In this pack you will find:
 • OH-23G Raven
 • C-130J Super Hercules
 • Junkers Ju-87 Stuka
+• Bell P-39D Airacobra
+• Curtiss P-40E Kittyhawk
