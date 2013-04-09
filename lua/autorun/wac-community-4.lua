@@ -33,7 +33,7 @@ end)
 
 if not found then return end
 
-wac.aircraft.spawnCategoryU = "WAC Unbreakable"
+if wac and wac.aircraft then wac.aircraft.spawnCategoryU = "WAC Unbreakable" end
 
 sound.Add(
 {
