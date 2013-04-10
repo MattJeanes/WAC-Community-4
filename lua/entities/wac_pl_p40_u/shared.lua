@@ -16,7 +16,7 @@ ENT.RotorModel        = "models/chippy/p40_prop.mdl"
 ENT.TopRotorPos        = Vector(0,0,72.25)
 ENT.TopRotorDir        = 1
 
-ENT.EngineForce        = 230
+ENT.EngineForce        = 235
 ENT.Weight            = 3720
 ENT.SeatSwitcherPos	= Vector(0,0,0)
 ENT.AngBrakeMul	= 0.04
