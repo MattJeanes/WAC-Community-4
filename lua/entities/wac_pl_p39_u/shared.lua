@@ -16,10 +16,9 @@ ENT.RotorModel        = "models/sentry/p39_prop.mdl"
 ENT.TopRotorPos        = Vector(126.25,0,80.72)
 ENT.TopRotorDir        = 1
 
-ENT.EngineForce        = 165
+ENT.EngineForce        = 200
 ENT.Weight            = 3347
 ENT.SeatSwitcherPos	= Vector(0,0,0)
-ENT.AngBrakeMul	= 0.01
 ENT.SmokePos        = Vector(110,0,72.25)
 ENT.FirePos            = Vector(110,0,72.25)
 
