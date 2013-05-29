@@ -16,7 +16,7 @@ ENT.SmokePos		= ENT.FirePos
 
 ENT.Weight			= 35000
 ENT.EngineForce		= 220
-ENT.TopRotorPos 	= Vector(140,-228,189.5)
+ENT.rotorPos 	= Vector(140,-228,189.5)
 
 ENT.AngBrakeMul		= 0.1
 
@@ -26,7 +26,7 @@ ENT.OtherRotorPos={
 	Vector(140,-457,198)
 }
 
-ENT.WheelInfo={
+ENT.Wheels={
 	{
 		mdl="models/drmatt/c130/wheel.mdl",
 		pos=Vector(-14.15,-109,20),
@@ -65,54 +65,35 @@ ENT.WheelInfo={
 	},
 }
 
-function ENT:AddSeatTable()
-	return {
-		[1]={
-			Pos=Vector(420,23.05,125),
-			ExitPos=Vector(425.42,140,125),
-			NoHud=true,
-			wep={
-				wac.aircraft.getWeapon("No Weapon"),
-			},
-		},
-		[2]={
-			Pos=Vector(420,-28.94,125),
-			ExitPos=Vector(425.42,140,125),
-			NoHud=true,
-			wep={
-				wac.aircraft.getWeapon("No Weapon"),
-			},
-		},
-		[3]={
-			Pos=Vector(371.79,-40,119.66),
-			Ang=Angle(0,-90,0),
-			ExitPos=Vector(425.42,140,125),
-			NoHud=true,
-			wep={
-				wac.aircraft.getWeapon("No Weapon"),
-			},
-		},
-		[4]={
-			Pos=Vector(340,-18.87,119.66),
-			ExitPos=Vector(425.42,140,125),
-			NoHud=true,
-			wep={
-				wac.aircraft.getWeapon("No Weapon"),
-			},
-		},
-	}
-end
+ENT.Seats = {
+	{
+		pos=Vector(420,23.05,125),
+		exit=Vector(425.42,140,125),
+	},
+	{
+		pos=Vector(420,-28.94,125),
+		exit=Vector(425.42,140,125),
+	},
+	{
+		pos=Vector(371.79,-40,119.66),
+		ang=Angle(0,-90,0),
+		exit=Vector(425.42,140,125),
+	},
+	{
+		pos=Vector(340,-18.87,119.66),
+		exit=Vector(425.42,140,125),
+	},
+}
 
-function ENT:AddSounds()
-	self.Sound={
-		Start=CreateSound(self.Entity,"WAC/c130/startup.wav"),
-		Blades=CreateSound(self.Entity,"C130.External"),
-		Engine=CreateSound(self.Entity,"C130.Internal"),
-		MissileAlert=CreateSound(self.Entity,"HelicopterVehicle/MissileNearby.mp3"),
-		MissileShoot=CreateSound(self.Entity,"HelicopterVehicle/MissileShoot.mp3"),
-		MinorAlarm=CreateSound(self.Entity,"HelicopterVehicle/MinorAlarm.mp3"),
-		LowHealth=CreateSound(self.Entity,"HelicopterVehicle/LowHealth.mp3"),
-		CrashAlarm=CreateSound(self.Entity,"HelicopterVehicle/CrashAlarm.mp3"),
-	}
-end
+ENT.Sounds={
+	Start="WAC/c130/startup.wav",
+	Blades="^WAC/c130/external.wav",
+	Engine="WAC/c130/internal.wav",
+	MissileAlert="HelicopterVehicle/MissileNearby.mp3",
+	MissileShoot="HelicopterVehicle/MissileShoot.mp3",
+	MinorAlarm="HelicopterVehicle/MinorAlarm.mp3",
+	LowHealth="HelicopterVehicle/LowHealth.mp3",
+	CrashAlarm="HelicopterVehicle/CrashAlarm.mp3"
+}
 
+function ENT:DrawWeaponSelection() end
