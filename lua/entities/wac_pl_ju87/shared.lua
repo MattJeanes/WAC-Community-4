@@ -50,10 +50,25 @@ ENT.Wheels={
 	},
 }
 
+ENT.Weapons = {
+	["MG17"] = {
+		class = "wac_pod_gatling",
+		info = {
+			Pods = {
+				Vector(85,-71.05,65),
+				Vector(85,71.05,65),
+			},
+			FireRate = 200,
+			Sequential = true
+		}
+	},
+}
+
 ENT.Seats = {
 	{
 		pos=Vector(25,0,83.2),
 		exit=Vector(30,60,85),
+		weapons={"MG17"}
 	},
 	{
 		pos=Vector(-18.5,0,77),
