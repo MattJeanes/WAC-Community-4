@@ -19,7 +19,7 @@ ENT.TopRotorDir        = 1
 ENT.EngineForce        = 235
 ENT.Weight            = 3720
 ENT.SeatSwitcherPos	= Vector(0,0,0)
-ENT.AngBrakeMul	= 0.04
+
 ENT.SmokePos        = Vector(110,0,72.25)
 ENT.FirePos            = Vector(110,0,72.25)
 
@@ -28,6 +28,10 @@ if CLIENT then
 		distance = 450
 	}
 end
+
+ENT.Agility = {
+	Thrust = 10
+}
 
 ENT.Wheels={
 	{

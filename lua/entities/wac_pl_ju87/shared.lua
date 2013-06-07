@@ -19,7 +19,6 @@ ENT.TopRotorDir        = 1
 ENT.EngineForce        = 240
 ENT.Weight            = 4320
 ENT.SeatSwitcherPos	= Vector(0,0,0)
-ENT.AngBrakeMul	= 0.04
 ENT.SmokePos        = Vector(121,0,75)
 ENT.FirePos            = Vector(121,0,95)
 
@@ -29,24 +28,28 @@ if CLIENT then
 	}
 end
 
+ENT.Agility = {
+	Thrust = 12.5
+}
+
 ENT.Wheels={
 	{
 		mdl="models/sentry/stuka_wheel.mdl",
 		pos=Vector(67,55.7,6),
 		friction=0,
-		mass=500,
+		mass=200,
 	},
 	{
 		mdl="models/sentry/stuka_wheel.mdl",
 		pos=Vector(67,-55.7,6),
 		friction=0,
-		mass=500,
+		mass=200,
 	},
 	{
 		mdl="models/sentry/stuka_bwheel.mdl",
 		pos=Vector(-217.5,0,62),
 		friction=0,
-		mass=550,
+		mass=200,
 	},
 }
 
@@ -58,10 +61,14 @@ ENT.Weapons = {
 				Vector(85,-71.05,65),
 				Vector(85,71.05,65),
 			},
-			FireRate = 200,
-			Sequential = true
+			FireRate = 250,
+			Sequential = true,
+			Sounds = {
+				shoot = "WAC/Stuka/gun.wav",
+				stop = "WAC/Stuka/gunstop.wav"
+			}
 		}
-	},
+	}
 }
 
 ENT.Seats = {
@@ -74,7 +81,7 @@ ENT.Seats = {
 		pos=Vector(-18.5,0,77),
 		exit=Vector(-10,60,85),
 		ang=Angle(0,180,0),
-	},
+	}
 }
 
 ENT.Sounds = {

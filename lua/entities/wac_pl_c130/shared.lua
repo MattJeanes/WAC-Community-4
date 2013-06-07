@@ -18,12 +18,14 @@ ENT.Weight			= 35000
 ENT.EngineForce		= 220
 ENT.rotorPos 	= Vector(140,-228,189.5)
 
-ENT.AngBrakeMul		= 0.1
-
 ENT.OtherRotorPos={
 	Vector(140,452,198),
 	Vector(140,224,189.5),
 	Vector(140,-457,198)
+}
+
+ENT.Agility = {
+	Thrust = 10
 }
 
 ENT.Wheels={
