@@ -61,7 +61,7 @@ ENT.Weapons = {
 				Vector(85,-71.05,65),
 				Vector(85,71.05,65),
 			},
-			FireRate = 250,
+			FireRate = 400,
 			Sequential = true,
 			Sounds = {
 				shoot = "WAC/Stuka/gun.wav",

@@ -52,7 +52,30 @@ ENT.Seats = {
 	{
 		pos=Vector(-62.5,0,63.5),
 		exit=Vector(-62.,60,85),
+		weapons={"Shipunov 2A42"}
     }
+}
+
+ENT.Weapons = {
+	["Shipunov 2A42"] = {
+		class = "wac_pod_gatling",
+		info = {
+			Pods = {
+				Vector(16,76.5,48.3),
+				Vector(15,-93.2,49.2),
+				Vector(16,84.8,48.3),
+				Vector(16,-84.8,48.3),
+				Vector(15,93.2,49.2),
+				Vector(16,-76.5,48.3)
+			},
+			FireRate = 500,
+			Sequential = true,
+			Sounds = {
+				shoot = "WAC/P40/gun.wav",
+				stop = "WAC/P40/gun_stop.wav"
+			}
+		}
+	},
 }
 
 ENT.Sounds={
