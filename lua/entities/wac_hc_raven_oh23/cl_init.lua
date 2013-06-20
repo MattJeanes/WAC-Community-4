@@ -1,4 +1,3 @@
-
 include("shared.lua")
 
 ENT.thirdPerson = {

@@ -10,13 +10,12 @@ ENT.PrintName = "C-130J Hercules"
 ENT.Model				= "models/drmatt/c130/body.mdl"
 ENT.RotorPhModel		= "models/props_junk/sawblade001a.mdl"
 ENT.RotorModel			= "models/drmatt/c130/propellor.mdl"
-
 ENT.FirePos			= Vector(133,-228,160)
 ENT.SmokePos		= ENT.FirePos
-
 ENT.Weight			= 35000
 ENT.EngineForce		= 220
 ENT.rotorPos 	= Vector(140,-228,189.5)
+ENT.MaxEnterDistance = 100
 
 ENT.OtherRotorPos={
 	Vector(140,452,198),

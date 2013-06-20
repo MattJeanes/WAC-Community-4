@@ -1,21 +1,29 @@
 if not wac then return end
+
 ENT.Base = "wac_hc_base"
 ENT.Type = "anim"
 ENT.Author = "SentryGunMan & Dr. Matt"
 ENT.Category = wac.aircraft.spawnCategory
 ENT.Spawnable = true
 ENT.AdminSpawnable = true
-
 ENT.PrintName = "S-64 Skycrane"
+
 ENT.Weight = 47000
 ENT.Model = "models/sentry/s64.mdl"
-ENT.RotorPhModel = "models/props_junk/sawblade001a.mdl"
-ENT.RotorModel = "models/sentry/s64_top.mdl"
-ENT.BackRotorModel = "models/sentry/s64_back.mdl"
-ENT.TopRotorPos	= Vector(0,0,210)
-ENT.BackRotorPos = Vector(-469.7,28.5,198)
 ENT.SmokePos = Vector(0,0,190)
 ENT.FirePos = Vector(0,0,190)
+
+ENT.TopRotor = {
+	dir = -1,
+	pos = Vector(0,0,210),
+	model = "models/sentry/s64_top.mdl"
+}
+
+ENT.BackRotor = {
+	dir = -1,
+	pos = Vector(-469.7,28.5,198),
+	model = "models/sentry/s64_back.mdl"
+}
 
 function ENT:Initialize()
 	self:base("wac_hc_base").Initialize(self)

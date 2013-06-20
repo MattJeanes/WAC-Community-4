@@ -5,23 +5,25 @@ ENT.Type = "anim"
 ENT.Category = wac.aircraft.spawnCategory
 ENT.Spawnable = true
 ENT.AdminSpawnable = true
-
 ENT.PrintName		= "OH-23G Raven"
 
 ENT.Model			= "models/chippy/oh23g/body.mdl"
-ENT.RotorPhModel	= "models/props_junk/sawblade001a.mdl"
-ENT.RotorModel		= "models/chippy/oh23g/mainrotor.mdl"
-ENT.BackRotorModel= "models/chippy/oh23g/tailrotor.mdl"
-
-ENT.BackRotorDir	= -1
-ENT.TopRotorPos	= Vector(-0.71,0,109.12)
-ENT.BackRotorPos	= Vector(-241.20,-1.00,74.36)
-
 ENT.EngineForce	= 23
 ENT.Weight		= 1650
-
 ENT.SmokePos	= Vector(-10,0,50)
 ENT.FirePos		= Vector(-10,0,50)
+
+ENT.TopRotor = {
+	dir = -1,
+	pos = Vector(-0.71,0,109.12),
+	model = "models/chippy/oh23g/mainrotor.mdl"
+}
+
+ENT.BackRotor = {
+	dir = -1,
+	pos = Vector(-241.20,-1.00,74.36),
+	model = "models/chippy/oh23g/tailrotor.mdl"
+}
 
 ENT.Seats = {
 	{
