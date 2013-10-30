@@ -69,8 +69,8 @@ ENT.Weapons = {
 		class = "wac_pod_gatling",
 		info = {
 			Pods = {
-				Vector(120,6.25,97),
-				Vector(120,-6.25,97),
+				Vector(135,6.25,97),
+				Vector(135,-6.25,97),
 				Vector(30,122,60.5),
 				Vector(30,-122,60.5),
 				Vector(31,116.85,62.2),
