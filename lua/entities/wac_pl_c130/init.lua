@@ -47,9 +47,9 @@ function ENT:addRotors()
 		self.OtherRotors[i]:SetOwner(self.Owner)
 		self.OtherRotors[i]:Spawn()
 		self.OtherRotors[i]:SetNotSolid(true)
-		self.OtherRotors[i].Phys = self.OtherRotors[i]:GetPhysicsObject()
-		self.OtherRotors[i].Phys:EnableGravity(false)
-		self.OtherRotors[i].Phys:SetMass(5)
+		self.OtherRotors[i].phys = self.OtherRotors[i]:GetPhysicsObject()
+		self.OtherRotors[i].phys:EnableGravity(false)
+		self.OtherRotors[i].phys:SetMass(5)
 		--self.OtherRotors[i].Phys:EnableDrag(false)
 		self.OtherRotors[i]:SetNoDraw(true)
 		self.OtherRotors[i].fHealth = 100
@@ -80,14 +80,29 @@ function ENT:PhysicsUpdate(ph)
 	
 	local vel = ph:GetVelocity()	
 	local pos = self:GetPos()
+	local ri = self:GetRight()
+	local up = self:GetUp()
+	local fwd = self:GetForward()
+	local ang = self:GetAngles()
+	local dvel = vel:Length()
 	local lvel = self:WorldToLocal(pos+vel)
-	local phm = FrameTime()*66
 	local throttle = self.controls.throttle/2 + 0.5
+	local phm = FrameTime()*66
+	
+	if !self.disabled then
+		for k,v in pairs(self.OtherRotors) do
+			if v and v.phys and v.phys:IsValid() then
+				if self.active and v:WaterLevel() <= 0 then
+					v.phys:AddAngleVelocity(Vector(0,0,self.engineRpm*30 + throttle*self.engineRpm*20)*self.rotorDir*phm)
+				end
+			end
+		end
+	end
 	
 	for k,v in pairs(self.OtherRotors) do
-		if v.Phys and v.Phys:IsValid() and self.rotor and self.rotor.phys and self.rotor.phys:IsValid() then
-			local brake = (throttle+1)*self.rotorRpm/900+self.rotor.phys:GetAngleVelocity().z/100
-			v.Phys:AddAngleVelocity(Vector(0,0,-brake + lvel.x*lvel.x/500000)*self.rotorDir*phm)
+		if v then
+			local brake = (throttle+1)*self.rotorRpm/900+v.phys:GetAngleVelocity().z/100
+			v.phys:AddAngleVelocity(Vector(0,0,-brake + lvel.x*lvel.x/500000)*self.rotorDir*phm)
 		end
 	end
 end
