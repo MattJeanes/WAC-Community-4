@@ -2,7 +2,7 @@ if not wac then return end
 
 ENT.Base = "wac_hc_base"
 ENT.Type = "anim"
-ENT.Category = wac.aircraft.spawnCategory
+ENT.Category = wac.aircraft.spawnCategoryC
 ENT.Spawnable = true
 ENT.AdminSpawnable = true
 ENT.PrintName		= "OH-23G Raven"
