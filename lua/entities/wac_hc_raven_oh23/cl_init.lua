@@ -1,5 +1,5 @@
 include("shared.lua")
 
 ENT.thirdPerson = {
-	distance = 270
+	distance = 400
 }
